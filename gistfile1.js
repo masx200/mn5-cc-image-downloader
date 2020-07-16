@@ -6,11 +6,11 @@ function getdirectoryname(document) {
         document.querySelectorAll(`.ina > p > b:nth-child(2)`)[0].textContent;
     return directoryname;
 }
-async function downloadallpagesfromdom(document) {
+async function downloadallpagesfromdocument(document) {
     return downloadonepageallimages(document).then(() => {
         return Promise.all(
             selectpagehtmlurls(document).map(async (url) => {
-                const dom = await resolvedomfromurl(url);
+                const dom = await resolvedocumentfromurl(url);
                 return await downloadonepageallimages(dom);
             })
         ).then(() => {
@@ -58,7 +58,7 @@ async function callaria2cdown(fileurls, directoryname) {
         throw new Error("content-type:" + contenttype);
     }
 }
-function selectimagesfromdom(document) {
+function selectimagesfromdocument(document) {
     const fileurls = Array.from(
         new Set(
             Array.from(document.querySelectorAll("img"))
@@ -71,7 +71,7 @@ function selectimagesfromdom(document) {
 }
 async function downloadonepageallimages(document) {
     const directoryname = getdirectoryname(document);
-    const fileurls = selectimagesfromdom(document);
+    const fileurls = selectimagesfromdocument(document);
     return callaria2cdown(fileurls, directoryname);
 }
 function selectpagehtmlurls(document) {
@@ -83,7 +83,7 @@ function selectpagehtmlurls(document) {
         )
     );
 }
-async function resolvedomfromurl(url) {
+async function resolvedocumentfromurl(url) {
     const parser = new DOMParser();
     const response = await fetch(url);
     if (!response.ok) {
@@ -99,5 +99,5 @@ async function resolvedomfromurl(url) {
     dom.documentURI = url;
     return dom;
 }
-export { downloadallpagesfromdom };
-export { resolvedomfromurl, selectimagesfromdom };
+export { downloadallpagesfromdocument };
+export { resolvedocumentfromurl, selectimagesfromdocument };
