@@ -7,16 +7,16 @@ function getdirectoryname(document) {
     return directoryname;
 }
 async function downloadallpagesfromdocument(document) {
-    return downloadonepageallimages(document).then(() => {
-        return Promise.all(
+    await downloadonepageallimages(document)
+        await Promise.all(
             selectpagehtmlurls(document).map(async (url) => {
                 const dom = await resolvedocumentfromurl(url);
                 return await downloadonepageallimages(dom);
             })
-        ).then(() => {
+        )
             console.log("all\xA0images\xA0download\xA0done "+document.documentURI);
-        });
-    });
+        
+   
 }
 async function callaria2cdown(fileurls, directoryname) {
     const data = fileurls.map((url) => ({
