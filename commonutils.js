@@ -1,4 +1,4 @@
-import { fetch, DOMParser } from "./index.js";
+import { fetch, DOMParser ,cssselect} from "./index.js";
 function getdirectoryname(document) {
     const directoryname =
         document.title +
@@ -95,9 +95,17 @@ async function resolvedocumentfromurl(url) {
     }
     const buffer = await response.arrayBuffer();
     const text = new TextDecoder("gb2312").decode(buffer);
-    const dom = parser.parseFromString(text, "text/html");
-    dom.documentURI = url;
-    return dom;
+    const document=parsedocument(text,url)
+    return document;
+}
+
+
+
+function parsedocument(text,url){
+const document = parser.parseFromString(text, "text/html");
+    document.documentURI = url;
+
+return document
 }
 export { downloadallpagesfromdocument };
 export { resolvedocumentfromurl, selectimagesfromdocument };
