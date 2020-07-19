@@ -84,8 +84,13 @@ function selectpagehtmlurls(document) {
     );
 }
 async function resolvedocumentfromurl(url) {
-    const parser = new DOMParser();
-    const response = await fetch(url);
+    const text=await gethtmltext(url)
+       const document=parsedocument(text,url)
+    return document;
+}
+
+async function gethtmltext(url){
+const response = await fetch(url);
     if (!response.ok) {
         throw new Error(response.status + response.statusText);
     }
@@ -95,13 +100,11 @@ async function resolvedocumentfromurl(url) {
     }
     const buffer = await response.arrayBuffer();
     const text = new TextDecoder("gb2312").decode(buffer);
-    const document=parsedocument(text,url)
-    return document;
+ return text
 }
 
-
-
 function parsedocument(text,url){
+const parser = new DOMParser();
 const document = parser.parseFromString(text, "text/html");
     document.documentURI = url;
 
