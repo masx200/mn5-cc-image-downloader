@@ -20,7 +20,7 @@ export { cssselect };
 process.on("unhandledRejection", (e) => {
     throw e;
 });
-const urls = process.argv.slice(2);
+const urls =Array.from(new Set( process.argv.slice(2)));
 async function start(urls) {
     for (let url of urls) {
         checkurl(url);
