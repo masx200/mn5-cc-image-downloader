@@ -7,3 +7,6 @@
 https://www.xiurenji.com/
 
 https://www.xgmn.org/
+
+需要配合 arai2c 使用，RPC调用网址为 http://localhost:6800
+
