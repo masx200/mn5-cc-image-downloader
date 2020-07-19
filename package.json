@@ -12,7 +12,6 @@
     "author": "masx200 <masx200@qq.com>",
     "description": "以下两个网站的图片爬虫",
     "dependencies": {
-        "cheerio": "^1.0.0-rc.3",
         "css-select": "^2.1.0",
         "lodash": "^4.17.19",
         "node-fetch": "^2.6.0",
