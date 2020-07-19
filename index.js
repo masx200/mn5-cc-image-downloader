@@ -1,3 +1,4 @@
+import assert from "assert";
 import nodefetch from "node-fetch";
 import xmldom from "xmldom";
 import {
@@ -14,12 +15,15 @@ const fetch = nodefetch.default;
 const { DOMParser } = xmldom;
 export { DOMParser };
 export { fetch };
+import cssselect from "css-select";
+export { cssselect };
 process.on("unhandledRejection", (e) => {
     throw e;
 });
 const urls = process.argv.slice(2);
 async function start(urls) {
     for (let url of urls) {
+        checkurl(url);
     }
 }
 if (urls.length) {
@@ -27,4 +31,12 @@ if (urls.length) {
     start(urls);
 } else {
     throw new Error("unkown download url,arguments empty");
+}
+function checkurl(url) {
+    url = new URL(url).href;
+    assert(
+        url.startsWith("http:") || url.startsWith("https:"),
+        "protocol should be http or https"
+    );
+    return url;
 }
