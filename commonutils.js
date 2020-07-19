@@ -94,7 +94,7 @@ function selectpagehtmlurls(document) {
 */
 //a.href
 
-return (new URL(e.getAttribute("href"),document.documentURI))).href
+return (new URL(e.getAttribute("href"),document.documentURI)).href
 
 }
 
