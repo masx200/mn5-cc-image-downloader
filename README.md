@@ -10,7 +10,7 @@ https://www.xgmn.org/
 
 需要配合 arai2c 使用，
 
-aria2 RPC调用网址为 http://localhost:6800/jsonrpc
+aria2 RPC 调用网址为 http://localhost:6800/jsonrpc
 
 使用方法
 

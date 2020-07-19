@@ -42,6 +42,7 @@ async function callaria2cdown(fileurls, directoryname) {
     }));
     const response = await fetch("http://localhost:6800/jsonrpc", {
         headers: {
+            connection: "keep-alive",
             accept: "application/json,\xA0text/javascript,\xA0*/*;\xA0q=0.01",
             "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
             "content-type": "application/json;\xA0charset=UTF-8",
@@ -112,7 +113,9 @@ async function resolvedocumentfromurl(url) {
 }
 
 async function gethtmltext(url) {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        headers: { connection: "keep-alive" },
+    });
     if (!response.ok) {
         throw new Error(response.status + response.statusText);
     }
