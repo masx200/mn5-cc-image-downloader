@@ -78,7 +78,7 @@ function selectpagehtmlurls(document) {
     return Array.from(
         new Set(
             Array.from(
-                document.querySelectorAll(".page a")
+                document.querySelectorAll(".page > a")
             ).map((a) => a.href)
         )
     );
