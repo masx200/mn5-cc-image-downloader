@@ -83,7 +83,7 @@ async function downloadonepageallimages(document) {
 function selectpagehtmlurls(document) {
     return Array.from(
         new Set(
-            Array.from(document.querySelectorAll(".page > a")).map((a) => {
+            Array.from(document.querySelectorAll(".page > a")).map((e) => {
                 /*
 <a href="/Xiuren/Xiuren14469.html" class="current">1</a>
 */
