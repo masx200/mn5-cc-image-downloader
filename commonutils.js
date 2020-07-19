@@ -1,4 +1,4 @@
-import { fetch, DOMParser ,cssselect} from "./index.js";
+import { fetch, DOMParser, cssselect } from "./index.js";
 function getdirectoryname(document) {
     const directoryname =
         document.title +
@@ -84,13 +84,13 @@ function selectpagehtmlurls(document) {
     );
 }
 async function resolvedocumentfromurl(url) {
-    const text=await gethtmltext(url)
-       const document=parsedocument(text,url)
+    const text = await gethtmltext(url);
+    const document = parsedocument(text, url);
     return document;
 }
 
-async function gethtmltext(url){
-const response = await fetch(url);
+async function gethtmltext(url) {
+    const response = await fetch(url);
     if (!response.ok) {
         throw new Error(response.status + response.statusText);
     }
@@ -100,15 +100,15 @@ const response = await fetch(url);
     }
     const buffer = await response.arrayBuffer();
     const text = new TextDecoder("gb2312").decode(buffer);
- return text
+    return text;
 }
 
-function parsedocument(text,url){
-const parser = new DOMParser();
-const document = parser.parseFromString(text, "text/html");
+function parsedocument(text, url) {
+    const parser = new DOMParser();
+    const document = parser.parseFromString(text, "text/html");
     document.documentURI = url;
 
-return document
+    return document;
 }
 export { downloadallpagesfromdocument };
 export { resolvedocumentfromurl, selectimagesfromdocument };
