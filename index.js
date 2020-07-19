@@ -24,9 +24,10 @@ const urls =Array.from(new Set( process.argv.slice(2)));
 async function start(urls) {
     for (let url of urls) {
         checkurl(url);
+const directoryname = getdirectoryname(document)
 const document=await resolvedocumentfromurl(url)
 const images=selectimagesfromdocument(document)
-console.log(url,images)
+console.log(url,directoryname,images)
     }
 }
 if (urls.length) {
