@@ -27,7 +27,7 @@ async function callaria2cdown(fileurls, directoryname) {
             [url],
             {
                 header:
-                    "Referer: https://www.xgmn.org/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+                    ["Referer: https://www.xgmn.org/","User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"].join("\n"),
                 dir: directoryname,
                 split: "16",
                 "max-connection-per-server": "16",
@@ -78,7 +78,7 @@ function selectpagehtmlurls(document) {
     return Array.from(
         new Set(
             Array.from(
-                document.querySelectorAll(".page")[0].querySelectorAll("a")
+                document.querySelectorAll(".page a")
             ).map((a) => a.href)
         )
     );
