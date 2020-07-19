@@ -1,6 +1,6 @@
 import assert from "assert";
 import nodefetch from "node-fetch";
-import xmldom from "xmldom";
+//import xmldom from "xmldom";
 import {
     getdirectoryname,
     selectimagesfromdocument,
@@ -13,11 +13,11 @@ import process from "process";
 http.globalAgent.keepAlive = true;
 https.globalAgent.keepAlive = true;
 const fetch = nodefetch.default;
-const { DOMParser } = xmldom;
-export { DOMParser };
+//const { DOMParser } = xmldom;
+//export { DOMParser };
 export { fetch };
-import cssselect from "css-select";
-export { cssselect };
+//import cssselect from "css-select";
+//export { cssselect };
 process.on("unhandledRejection", (e) => {
     throw e;
 });
