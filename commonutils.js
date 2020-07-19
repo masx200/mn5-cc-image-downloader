@@ -63,8 +63,9 @@ function selectimagesfromdocument(document) {
         new Set(
             Array.from(document.querySelectorAll("img"))
                 .map((e) =>{ 
-
-
+/*
+<img onload="size(this)" alt="XiuRen第2252期_嫩模王雨纯私房情趣内衣秀火辣美体傲人豪乳极致诱惑写真53P" src="/uploadfile/202007/4/1819160183.jpg" />
+*/
 //e.src
 return new URL(e.getAttribute("src"),document.documentURI)).url
 
@@ -85,7 +86,19 @@ function selectpagehtmlurls(document) {
         new Set(
             Array.from(
                 document.querySelectorAll(".page > a")
-            ).map((a) => a.href)
+            ).map((a) => 
+
+{
+/*
+<a href="/Xiuren/Xiuren14469.html" class="current">1</a>
+*/
+//a.href
+
+return new URL(e.getAttribute("href"),document.documentURI)).url
+
+}
+
+)
         )
     );
 }
