@@ -17,7 +17,9 @@ async function downloadallpagesfromdocument(document) {
             return await downloadonepageallimages(dom);
         })
     );
-    console.log("all\xA0images\xA0download\xA0done " + document.documentURI);
+    console.log(
+        "all album\xA0images\xA0download\xA0done " + document.documentURI
+    );
 }
 async function callaria2cdown(fileurls, directoryname) {
     const data = fileurls.map((url) => ({
@@ -80,10 +82,10 @@ function selectimagesfromdocument(document) {
 }
 async function downloadonepageallimages(document) {
     const directoryname = getdirectoryname(document);
-    const fileurls = selectimagesfromdocument(document);
-    const url = document.documentElement;
+    const images = selectimagesfromdocument(document);
+    const url = document.documentURI;
     console.log(url, directoryname, images);
-    await callaria2cdown(fileurls, directoryname);
+    await callaria2cdown(images, directoryname);
     console.log(
         "one page\xA0images\xA0download\xA0done " + document.documentURI
     );
