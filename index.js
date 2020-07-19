@@ -26,7 +26,7 @@ async function start(urls) {
         checkurl(url);
 const document=await resolvedocumentfromurl(url)
 const images=selectimagesfromdocument(document)
-console.log(images)
+console.log(url,images)
     }
 }
 if (urls.length) {
