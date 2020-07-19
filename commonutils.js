@@ -1,4 +1,6 @@
-import { fetch, DOMParser, cssselect } from "./index.js";
+import { fetch
+//, DOMParser, cssselect 
+} from "./index.js";
 function getdirectoryname(document) {
     const directoryname =
         //   document.title +
@@ -114,14 +116,17 @@ async function gethtmltext(url) {
     const text = new TextDecoder("gb2312").decode(buffer);
     return text;
 }
-
+import jsdom from "jsdom"
+const  {  JSDOM  }  =  jsdom
 function parsedocument(text, url) {
-    const parser = new DOMParser();
-    const document = parser.parseFromString(text, "text/html");
-    document.documentURI = url;
-    document.querySelectorAll = function (query) {
+const {window:{document}}=new JSDOM(text,{url:url})
+   // const parser = new DOMParser();
+   // const document = parser.parseFromString(text, "text/html");
+    
+document.documentURI = url;
+   /* document.querySelectorAll = function (query) {
         return cssselect(query, document.documentElement);
-    };
+    };*/
     return document;
 }
 export { downloadallpagesfromdocument, getdirectoryname };
