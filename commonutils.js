@@ -14,7 +14,7 @@ async function downloadallpagesfromdocument(document) {
                 return await downloadonepageallimages(dom);
             })
         ).then(() => {
-            console.log("all\xA0images\xA0download\xA0done");
+            console.log("all\xA0images\xA0download\xA0done "+document.documentURI);
         });
     });
 }
@@ -67,7 +67,7 @@ function selectimagesfromdocument(document) {
 <img onload="size(this)" alt="XiuRen第2252期_嫩模王雨纯私房情趣内衣秀火辣美体傲人豪乳极致诱惑写真53P" src="/uploadfile/202007/4/1819160183.jpg" />
 */
 //e.src
-return new URL(e.getAttribute("src"),document.documentURI)).url
+return (new URL(e.getAttribute("src"),document.documentURI)).href
 
 })
                 .filter((a) => !!a)
@@ -94,7 +94,7 @@ function selectpagehtmlurls(document) {
 */
 //a.href
 
-return new URL(e.getAttribute("href"),document.documentURI)).url
+return (new URL(e.getAttribute("href"),document.documentURI))).href
 
 }
 
