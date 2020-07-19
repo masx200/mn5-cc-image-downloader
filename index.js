@@ -27,8 +27,10 @@ async function start(urls) {
         checkurl(url);
 
         const document = await resolvedocumentfromurl(url);
-        const directoryname = getdirectoryname(document);
         const images = selectimagesfromdocument(document);
+        //console.log(images)
+        const directoryname = getdirectoryname(document);
+
         console.log(url, directoryname, images);
     }
 }
