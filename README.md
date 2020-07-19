@@ -12,3 +12,10 @@ https://www.xgmn.org/
 
 aria2 RPC调用网址为 http://localhost:6800/jsonrpc
 
+使用方法
+
+```shell
+
+yarn start 'https://www.xgmn.org/Mtcos/Mtcos14529.html'
+
+```
