@@ -1,9 +1,9 @@
 import nodefetch from "node-fetch";
 import xmldom from "xmldom";
 import {
-    selectimagesfromdocument,
-    downloadallpagesfromdocument,
-    resolvedocumentfromurl,
+  selectimagesfromdocument,
+  downloadallpagesfromdocument,
+  resolvedocumentfromurl,
 } from "./gistfile1.js";
 import https from "https";
 import http from "http";
@@ -15,12 +15,16 @@ const { DOMParser } = xmldom;
 export { DOMParser };
 export { fetch };
 process.on("unhandledRejection", (e) => {
-    throw e;
+  throw e;
 });
-const urls = ["https://www.xgmn.org/Xiuren/Xiuren14469.html"];
+const urls = process.argv.slice(2);
 async function start(urls) {
-    for (let url of urls) {
-        const document = await resolvedocumentfromurl(url);
-    }
+  for (let url of urls) {
+  }
 }
-start(urls);
+if (urls.length) {
+  console.log(urls);
+  start(urls);
+} else {
+  throw new Error("unkown download url,arguments empty");
+}
