@@ -62,7 +62,13 @@ function selectimagesfromdocument(document) {
     const fileurls = Array.from(
         new Set(
             Array.from(document.querySelectorAll("img"))
-                .map((e) => e.src)
+                .map((e) =>{ 
+
+
+//e.src
+return new URL(e.getAttribute("src"),document.documentURI)).url
+
+})
                 .filter((a) => !!a)
                 .filter((a) => a.startsWith("http"))
         )
