@@ -107,7 +107,10 @@ function parsedocument(text, url) {
     const parser = new DOMParser();
     const document = parser.parseFromString(text, "text/html");
     document.documentURI = url;
+document.querySelectorAll=function(query){
 
+return cssselect(query,document)
+}
     return document;
 }
 export { downloadallpagesfromdocument };
