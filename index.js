@@ -5,7 +5,7 @@ import {
     selectimagesfromdocument,
     downloadallpagesfromdocument,
     resolvedocumentfromurl,
-} from "./gistfile1.js";
+} from "./commonutils.js";
 import https from "https";
 import http from "http";
 import process from "process";
