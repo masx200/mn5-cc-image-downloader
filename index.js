@@ -30,7 +30,7 @@ if (urls.length) {
     console.log(urls);
     start(urls);
 } else {
-    throw new Error("unkown download url,arguments empty");
+    throw new Error("empty download url,arguments should not be empty");
 }
 function checkurl(url) {
     url = new URL(url).href;
