@@ -81,7 +81,12 @@ function selectimagesfromdocument(document) {
 async function downloadonepageallimages(document) {
     const directoryname = getdirectoryname(document);
     const fileurls = selectimagesfromdocument(document);
-    return callaria2cdown(fileurls, directoryname);
+    const url = document.documentElement;
+    console.log(url, directoryname, images);
+    await callaria2cdown(fileurls, directoryname);
+    console.log(
+        "one page\xA0images\xA0download\xA0done " + document.documentURI
+    );
 }
 function selectpagehtmlurls(document) {
     return Array.from(
