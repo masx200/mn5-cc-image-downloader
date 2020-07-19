@@ -10,7 +10,7 @@
     },
     "keywords": [],
     "author": "masx200 <masx200@qq.com>",
-    "description": "以下两个网站的图片爬虫",
+    "description": "以下两个网站的图片爬虫 www.xgmn.org",
     "dependencies": {
         "jsdom": "^16.3.0",
         "node-fetch": "^2.6.0",
