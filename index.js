@@ -2,7 +2,7 @@ import assert from "assert";
 import nodefetch from "node-fetch";
 import xmldom from "xmldom";
 import {
-getdirectoryname,
+    getdirectoryname,
     selectimagesfromdocument,
     downloadallpagesfromdocument,
     resolvedocumentfromurl,

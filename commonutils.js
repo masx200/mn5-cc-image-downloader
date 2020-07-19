@@ -124,5 +124,5 @@ function parsedocument(text, url) {
     };
     return document;
 }
-export { downloadallpagesfromdocument ,getdirectoryname};
+export { downloadallpagesfromdocument, getdirectoryname };
 export { resolvedocumentfromurl, selectimagesfromdocument };
