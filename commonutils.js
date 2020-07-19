@@ -44,11 +44,11 @@ async function callaria2cdown(fileurls, directoryname) {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "cross-site",
         },
-        referrer: "http://aria2c.com/",
+        
         referrerPolicy: "no-referrer-when-downgrade",
         body: JSON.stringify(data),
         method: "POST",
-        mode: "cors",
+       
     });
     if (!response.ok) {
         throw new Error(response.status + response.statusText);
