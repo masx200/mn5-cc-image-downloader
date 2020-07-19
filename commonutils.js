@@ -1,22 +1,20 @@
 import { fetch, DOMParser, cssselect } from "./index.js";
 function getdirectoryname(document) {
     const directoryname =
-     //   document.title +
-       // "\xA0" +
+        //   document.title +
+        // "\xA0" +
         document.querySelectorAll(`.ina > p > b:nth-child(2)`)[0].textContent;
     return directoryname;
 }
 async function downloadallpagesfromdocument(document) {
-    await downloadonepageallimages(document)
-        await Promise.all(
-            selectpagehtmlurls(document).map(async (url) => {
-                const dom = await resolvedocumentfromurl(url);
-                return await downloadonepageallimages(dom);
-            })
-        )
-            console.log("all\xA0images\xA0download\xA0done "+document.documentURI);
-        
-   
+    await downloadonepageallimages(document);
+    await Promise.all(
+        selectpagehtmlurls(document).map(async (url) => {
+            const dom = await resolvedocumentfromurl(url);
+            return await downloadonepageallimages(dom);
+        })
+    );
+    console.log("all\xA0images\xA0download\xA0done " + document.documentURI);
 }
 async function callaria2cdown(fileurls, directoryname) {
     const data = fileurls.map((url) => ({
@@ -26,8 +24,10 @@ async function callaria2cdown(fileurls, directoryname) {
         params: [
             [url],
             {
-                header:
-                    ["Referer: https://www.xgmn.org/","User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"].join("\n"),
+                header: [
+                    "Referer: https://www.xgmn.org/",
+                    "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+                ].join("\n"),
                 dir: directoryname,
                 split: "16",
                 "max-connection-per-server": "16",
@@ -44,11 +44,10 @@ async function callaria2cdown(fileurls, directoryname) {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "cross-site",
         },
-        
+
         referrerPolicy: "no-referrer-when-downgrade",
         body: JSON.stringify(data),
         method: "POST",
-       
     });
     if (!response.ok) {
         throw new Error(response.status + response.statusText);
@@ -62,14 +61,14 @@ function selectimagesfromdocument(document) {
     const fileurls = Array.from(
         new Set(
             Array.from(document.querySelectorAll("img"))
-                .map((e) =>{ 
-/*
+                .map((e) => {
+                    /*
 <img onload="size(this)" alt="XiuRen第2252期_嫩模王雨纯私房情趣内衣秀火辣美体傲人豪乳极致诱惑写真53P" src="/uploadfile/202007/4/1819160183.jpg" />
 */
-//e.src
-return (new URL(e.getAttribute("src"),document.documentURI)).href
-
-})
+                    //e.src
+                    return new URL(e.getAttribute("src"), document.documentURI)
+                        .href;
+                })
                 .filter((a) => !!a)
                 .filter((a) => a.startsWith("http"))
         )
@@ -84,21 +83,15 @@ async function downloadonepageallimages(document) {
 function selectpagehtmlurls(document) {
     return Array.from(
         new Set(
-            Array.from(
-                document.querySelectorAll(".page > a")
-            ).map((a) => 
-
-{
-/*
+            Array.from(document.querySelectorAll(".page > a")).map((a) => {
+                /*
 <a href="/Xiuren/Xiuren14469.html" class="current">1</a>
 */
-//a.href
+                //a.href
 
-return (new URL(e.getAttribute("href"),document.documentURI)).href
-
-}
-
-)
+                return new URL(e.getAttribute("href"), document.documentURI)
+                    .href;
+            })
         )
     );
 }
@@ -126,10 +119,9 @@ function parsedocument(text, url) {
     const parser = new DOMParser();
     const document = parser.parseFromString(text, "text/html");
     document.documentURI = url;
-document.querySelectorAll=function(query){
-
-return cssselect(query,document)
-}
+    document.querySelectorAll = function (query) {
+        return cssselect(query, document);
+    };
     return document;
 }
 export { downloadallpagesfromdocument };
