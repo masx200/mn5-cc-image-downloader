@@ -1,4 +1,5 @@
-{"bin":"cli.js",
+{
+    "bin": "cli.js",
     "type": "module",
     "name": "xiurenji-com-ngmn-org-image-downloader",
     "version": "1.0.0",
@@ -14,13 +15,12 @@
     "dependencies": {
         "jsdom": "^16.3.0",
         "node-fetch": "^2.6.0"
-        
     },
     "repository": {
         "type": "git",
         "url": "https://gitee.com/masx200/xiurenji-com-ngmn-org-image-downloader"
     },
     "devDependencies": {
-"prettier": "^2.0.5"
-}
+        "prettier": "^2.0.5"
+    }
 }

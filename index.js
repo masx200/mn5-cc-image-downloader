@@ -50,4 +50,4 @@ function checkurl(url) {
     );
     return url;
 }
-export{start}
+export { start };
