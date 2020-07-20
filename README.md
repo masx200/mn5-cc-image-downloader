@@ -14,6 +14,7 @@ aria2 RPC 调用网址为
 
 http://localhost:6800/jsonrpc
 
+
 使用方法
 
 命令行模式支持多个参数传入
@@ -23,3 +24,7 @@ http://localhost:6800/jsonrpc
 yarn start 'https://www.xgmn.org/Mtcos/Mtcos14529.html' https://www.xgmn.org/YouMi/14550.html
 
 ```
+
+aria2c RPC 配置
+
+https://github.com/masx200/aria2c-backend-rpc-config
