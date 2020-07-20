@@ -18,10 +18,10 @@ const fetch = nodefetch.default;
 export { fetch };
 //import cssselect from "css-select";
 //export { cssselect };
-process.on("unhandledRejection", (e) => {
+/*process.on("unhandledRejection", (e) => {
     throw e;
-});
-const urls = Array.from(new Set(process.argv.slice(2)));
+});*/
+//const urls = Array.from(new Set(process.argv.slice(2)));*/
 async function start(urls) {
     for (let url of urls) {
         checkurl(url);
@@ -36,12 +36,12 @@ async function start(urls) {
         await downloadallpagesfromdocument(document);
     }
 }
-if (urls.length) {
+/*if (urls.length) {
     console.log(urls);
     start(urls);
 } else {
     throw new Error("empty download url,arguments should not be empty");
-}
+}*/
 function checkurl(url) {
     url = new URL(url).href;
     assert(
