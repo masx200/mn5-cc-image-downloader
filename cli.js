@@ -1,4 +1,4 @@
-#/bin/env node
+#/usr/bin/env node
 import {start}from "./index.js"
 const urls = Array.from(new Set(process.argv.slice(2)));
 if (urls.length) {
