@@ -1,4 +1,4 @@
-# xiurenji-com-ngmn-org-image-downloader
+# ngmn-org-image-downloader
 
 #### 介绍
 
@@ -6,7 +6,7 @@
 
 https://www.xiurenji.com/
 
-https://www.xgmn.org/
+https://www.mn5.cc/
 
 需要配合 arai2c 使用，
 
@@ -20,7 +20,7 @@ http://localhost:6800/jsonrpc
 
 ```shell
 
-yarn start 'https://www.xgmn.org/Mtcos/Mtcos14529.html' https://www.xgmn.org/YouMi/14550.html
+yarn start 'https://www.mn5.cc/Mtcos/Mtcos14529.html' https://www.xgmn.org/YouMi/14550.html
 
 ```
 
