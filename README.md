@@ -20,7 +20,7 @@ http://localhost:6800/jsonrpc
 
 ```shell
 
-yarn start 'https://www.mn5.cc/Mtcos/Mtcos14529.html' https://www.xgmn.org/YouMi/14550.html
+yarn start 'https://www.mn5.cc/Mtcos/Mtcos14529.html' "https://www.mn5.cc/YouMi/14550.html"
 
 ```
 
