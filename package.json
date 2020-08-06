@@ -1,7 +1,7 @@
 {
     "bin": "cli.js",
     "type": "module",
-    "name": "mn5-cc-image-downloader",
+    "name": "@masx200/mn5-cc-image-downloader",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
