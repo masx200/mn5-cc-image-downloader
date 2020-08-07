@@ -6,8 +6,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-"test":"yarn start https://www.mn5.cc/YouMi/14745.html https://www.xiurenji.com/XiuRen/6197.html
-",
+        "test": "yarn start https://www.mn5.cc/YouMi/14745.html https://www.xiurenji.com/XiuRen/6197.html",
         "start": "node cli.js",
         "prettier": "prettier --write *.json *.md *.js"
     },
