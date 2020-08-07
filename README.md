@@ -16,17 +16,19 @@ http://localhost:6800/jsonrpc
 
 安装
 
-
 ```
 yarn global add "@masx200/mn5-cc-image-downloader"
 ```
+
 使用方法
 
 命令行模式支持多个参数传入
-```
-npx mn5-cc-image-downloader https://www.mn5.cc/YouMi/14745.html 
 
 ```
+npx mn5-cc-image-downloader https://www.mn5.cc/YouMi/14745.html
+
+```
+
 ```shell
 
 yarn start 'https://www.mn5.cc/Mtcos/Mtcos14529.html' "https://www.mn5.cc/YouMi/14550.html"
