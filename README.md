@@ -25,7 +25,7 @@ yarn global add "@masx200/mn5-cc-image-downloader"
 命令行模式支持多个参数传入
 
 ```
-npx mn5-cc-image-downloader https://www.mn5.cc/YouMi/14745.html
+npx mn5-cc-image-downloader https://www.mn5.cc/YouMi/14745.html https://www.xiurenji.com/XiuRen/6197.html
 
 ```
 
