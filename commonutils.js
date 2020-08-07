@@ -24,7 +24,11 @@ async function downloadallpagesfromdocument(document) {
     );
 }
 async function callaria2cdown(fileurls, directoryname) {
-    const data = fileurls.map((url) => ({
+    const data = fileurls.map((url) => {
+const origin=new URL(url).origin
+
+
+return ({
         jsonrpc: "2.0",
         method: "aria2.addUri",
         id: 1,
@@ -32,7 +36,7 @@ async function callaria2cdown(fileurls, directoryname) {
             [url],
             {
                 header: [
-                    "Referer: https://www.xgmn.org/",
+                    "Referer: "+origin,
                     "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
                 ].join("\n"),
                 dir: directoryname,
@@ -41,7 +45,10 @@ async function callaria2cdown(fileurls, directoryname) {
                 "seed-ratio": "1.0",
             },
         ],
-    }));
+    })
+
+
+});
     const response = await fetch("http://localhost:6800/jsonrpc", {
         headers: {
             connection: "keep-alive",
