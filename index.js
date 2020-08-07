@@ -1,5 +1,5 @@
 import assert from "assert";
-import nodefetch from "node-fetch";
+//import nodefetch from "node-fetch";
 //import xmldom from "xmldom";
 import {
     getdirectoryname,
@@ -12,10 +12,10 @@ import http from "http";
 import process from "process";
 http.globalAgent.keepAlive = true;
 https.globalAgent.keepAlive = true;
-const fetch = nodefetch.default;
+//const fetch = nodefetch.default;
 //const { DOMParser } = xmldom;
 //export { DOMParser };
-export { fetch };
+//export { fetch };
 //import cssselect from "css-select";
 //export { cssselect };
 /*process.on("unhandledRejection", (e) => {
