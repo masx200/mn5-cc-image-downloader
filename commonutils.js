@@ -1,7 +1,7 @@
 import {
     fetch,
     //, DOMParser, cssselect
-} from "./index.js";
+} from "./fetch.js";
 function getdirectoryname(document) {
     const directoryname =
         //   document.title +
