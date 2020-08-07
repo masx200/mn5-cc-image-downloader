@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@shanyue/promise-utils@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@shanyue/promise-utils/-/promise-utils-2.0.4.tgz#500a27fdcf2071300ac571cff1b397d934ffa45e"
+  integrity sha512-dpGmggFZ80nZJJpQ957fxbavLXnkvrcL/miQXtIexlZZqWStGnNgKHQ4cdDUei+ktpKn24YbIXsiy957GtNs6g==
+
 abab@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npm.taobao.org/abab/download/abab-2.0.3.tgz#623e2075e02eb2d3f2475e49f99c91846467907a"

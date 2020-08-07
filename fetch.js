@@ -1,8 +1,22 @@
 import nodefetch from "node-fetch";
 
-function fetch(url, opt = {}) {
-    onrequest(url, opt);
-    return nodefetch.default(url, opt);
+import pupkg from "@shanyue/promise-utils";
+const { retry, sleep } = pupkg;
+async function fetch(url, opt = {}) {
+    return await retry(
+        () => {
+            onrequest(url, opt);
+            return nodefetch.default(url, opt);
+        },
+        {
+            times: 5,
+            onFailedAttempt: async (e) => {
+                console.warn(e);
+                console.warn("网络错误，3秒后重试");
+                await sleep(3000);
+            },
+        }
+    );
 }
 export { fetch };
 function onrequest(url, opt = {}) {
