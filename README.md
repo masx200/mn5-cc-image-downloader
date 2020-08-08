@@ -8,6 +8,8 @@ https://www.xiurenji.com/
 
 https://www.mn5.cc/
 
+带有限流功能和网络重试功能
+
 需要配合 arai2c 使用，
 
 aria2 RPC 调用网址为

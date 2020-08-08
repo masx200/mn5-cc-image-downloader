@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@masx200/async-task-current-limiter@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@masx200/async-task-current-limiter/-/async-task-current-limiter-1.0.9.tgz#23ca138e4cf6b5dbc30844475394ae3154a951dc"
+  integrity sha512-+JSTzadMW49wbzRIPzJS5BzEypt5Hy8CIbatYwpk1Gp8AbGxvwKoj1XgA//P2bEEodmFZGVCpgb3eXJl9SOVfA==
+  dependencies:
+    "@masx200/event-emitter-target" "^1.1.7"
+
+"@masx200/event-emitter-target@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@masx200/event-emitter-target/-/event-emitter-target-1.1.7.tgz#11757a805314886ecb54a5aa5fab6815b33b0913"
+  integrity sha512-7MPOvpJxXOaX5QMRFn+oTrVg/vvff2fyOSAzGxHOf/sIZBnSLdaupJJPn2him/hkAzFmiCPK58uMP7f6iRLiIA==
+
 "@shanyue/promise-utils@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@shanyue/promise-utils/-/promise-utils-2.0.4.tgz#500a27fdcf2071300ac571cff1b397d934ffa45e"

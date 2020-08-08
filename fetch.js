@@ -2,6 +2,10 @@ import nodefetch from "node-fetch";
 
 import pupkg from "@shanyue/promise-utils";
 const { retry, sleep } = pupkg;
+
+import AsyncLimiterClass from "@masx200/async-task-current-limiter";
+const limiter = AsyncLimiterClass(20);
+
 async function fetch(url, opt = {}) {
     return await retry(
         () => {
@@ -18,7 +22,9 @@ async function fetch(url, opt = {}) {
         }
     );
 }
-export { fetch };
+
+const limitfetch = limiter.asyncwrap(fetch);
+export { limitfetch as fetch };
 function onrequest(url, opt = {}) {
     const { method = "GET" } = opt;
     console.log("request", method, url);
