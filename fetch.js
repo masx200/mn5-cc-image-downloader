@@ -13,11 +13,11 @@ async function fetch(url, opt = {}) {
             return nodefetch.default(url, opt);
         },
         {
-            times: 5,
+            times: 10,
             onFailedAttempt: async (e) => {
                 console.warn(e);
-                console.warn("网络错误，3秒后重试");
-                await sleep(3000);
+                console.warn("网络错误，4秒后重试");
+                await sleep(4000);
             },
         }
     );
