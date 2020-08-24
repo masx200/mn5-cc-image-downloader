@@ -22,6 +22,10 @@ https.globalAgent.keepAlive = true;
     throw e;
 });*/
 //const urls = Array.from(new Set(process.argv.slice(2)));*/
+
+const urltodom = new Map();
+
+export { urltodom };
 async function start(urls) {
     urls = Array.from(new Set(urls));
     for (let url of urls) {
@@ -36,6 +40,10 @@ async function start(urls) {
         //console.log(url, directoryname, images);
 
         await downloadallpagesfromdocument(document);
+
+        //domtourl.clear();
+
+        urltodom.clear();
     }
 }
 /*if (urls.length) {

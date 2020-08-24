@@ -1,3 +1,4 @@
+import { urltodom } from "./index.js";
 import {
     fetch,
     //, DOMParser, cssselect
@@ -114,8 +115,14 @@ function selectpagehtmlurls(document) {
     );
 }
 async function resolvedocumentfromurl(url) {
+    if (urltodom.get(url)) {
+        return urltodom.get(url);
+    }
+
     const text = await gethtmltext(url);
     const document = parsedocument(text, url);
+    urltodom.set(url, document);
+
     return document;
 }
 
