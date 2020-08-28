@@ -31,4 +31,4 @@ function checkurl(url) {
     );
     return url;
 }
-export { start ,checkurl};
+export { start, checkurl };
