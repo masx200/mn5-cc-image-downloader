@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { start } from "./index.js";
-const urls = Array.from(new Set(process.argv.slice(2))).filter(a=>a.startsWith("h"));
+const urls = Array.from(new Set(process.argv.slice(2))).filter((a) =>
+    a.startsWith("h")
+);
 if (urls.length) {
     console.log(urls);
     start(urls).then(() => {
