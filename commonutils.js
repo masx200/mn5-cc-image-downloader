@@ -1,6 +1,7 @@
 const rpcurl="http://localhost:6800/jsonrpc"
 
-
+import {checkurl}from "./index.js";
+checkurl(rpcurl)
 import { urltodom } from "./index.js";
 import {
     fetch,
