@@ -1,3 +1,6 @@
+const rpcurl="http://localhost:6800/jsonrpc"
+
+
 import { urltodom } from "./index.js";
 import {
     fetch,
@@ -48,7 +51,7 @@ async function callaria2cdown(fileurls, directoryname) {
             ],
         };
     });
-    const response = await fetch("http://localhost:6800/jsonrpc", {
+    const response = await fetch(rpcurl, {
         headers: {
             connection: "keep-alive",
             accept: "application/json,text/javascript",
