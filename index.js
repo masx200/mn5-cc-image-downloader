@@ -1,6 +1,5 @@
 import assert from "assert";
 import {
-    getdirectoryname,
     selectimagesfromdocument,
     downloadallpagesfromdocument,
     resolvedocumentfromurl,

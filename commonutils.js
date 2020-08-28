@@ -1,16 +1,16 @@
-export function getdirectoryname(document) {
-    const directoryname =
-        //   document.title +
-        // "\xA0" +
-        //有的页面找不到这个TypeError: Cannot read property 'textContent' of undefined
-        document.querySelectorAll(`.ina > p > b:nth-child(2)`)[0]
-            ?.textContent ?? document.title;
-    return directoryname;
-}
-
-const rpcurl = "http://localhost:6800/jsonrpc";
+import { getdirectoryname } from "./getdirectoryname.js";
+import { helptxt } from "./help.js";
+import { parseargs } from "./parseargs.js";
+const argobj = parseargs(process.argv.slice(2));
+console.log(argobj);
+const rpcurl = argobj["rpcurl"] ?? "http://localhost:6800/jsonrpc";
 import { checkurl } from "./index.js";
-checkurl(rpcurl);
+try {
+    checkurl(rpcurl);
+} catch (e) {
+    console.error(helptxt);
+    throw e;
+}
 import { urltodom } from "./index.js";
 import { fetch } from "./fetch.js";
 async function downloadallpagesfromdocument(document) {
