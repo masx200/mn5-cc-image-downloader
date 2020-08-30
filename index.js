@@ -12,10 +12,10 @@ https.globalAgent.keepAlive = true;
 const urltodom = new Map();
 export { urltodom };
 async function start(urls) {
-    urls = Array.from(new Set(urls));
+    urls = Array.from(new Set(urls)).map(url => url.trim()).forEach(url=>checkurl(url););
     for (let url of urls) {
-        url = url.trim();
-        checkurl(url);
+       // url = url.trim();
+       // checkurl(url);
         const document = await resolvedocumentfromurl(url);
         await downloadallpagesfromdocument(document);
         urltodom.clear();
