@@ -34,6 +34,8 @@ yarn global add "@masx200/mn5-cc-image-downloader"
 
 可选参数 `rpcurl` : 指定调用 aria2 rpc 的 URL
 
+例如
+
 ```
 npx @masx200/mn5-cc-image-downloader https://www.mn5.cc/YouMi/14745.html https://www.xiurenji.com/XiuRen/6197.html
 
