@@ -12,17 +12,16 @@ https.globalAgent.keepAlive = true;
 const urltodom = new Map();
 export { urltodom };
 async function start(urls) {
-    urls = Array.from(new Set(urls))
-        .map((url) => url.trim())
-        .map((url) => checkurl(url));
+    urls = Array.from(new Set(urls)).map((url) => url.trim());
+    urls.forEach((url) => checkurl(url));
     for (let url of urls) {
         // url = url.trim();
         // checkurl(url);
         const document = await resolvedocumentfromurl(url);
         await downloadallpagesfromdocument(document);
-        urltodom.clear();
-        console.log("全部处理完成");
     }
+    urltodom.clear();
+    console.log("全部处理完成");
 }
 function checkurl(url) {
     url = new URL(url).href;
