@@ -7,6 +7,7 @@ import { selectimagesfromdocument } from "./selectimagesfromdocument.js";
 import { downloadallpagesfromdocument } from "./start.js";
 import process from "process";
 const argobj = parseargs(process.argv.slice(2));
+export { argobj };
 console.log(argobj);
 export const rpcurl = argobj["rpcurl"] ?? "http://localhost:6800/jsonrpc";
 try {
