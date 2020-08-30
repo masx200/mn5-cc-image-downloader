@@ -6,6 +6,7 @@ import { urltodom } from "./index.js";
 export async function start(urls) {
     urls = Array.from(new Set(urls)).map((url) => url.trim());
     urls.forEach((url) => checkurl(url));
+    
     for (let url of urls) {
         // url = url.trim();
         // checkurl(url);
