@@ -1,15 +1,16 @@
+import AsyncLimiterClass from "@masx200/async-task-current-limiter";
+import pupkg from "@shanyue/promise-utils";
 import nodefetch from "node-fetch";
 
-import pupkg from "@shanyue/promise-utils";
 const { retry, sleep } = pupkg;
 
-import AsyncLimiterClass from "@masx200/async-task-current-limiter";
 const limiter = AsyncLimiterClass(20);
 
 async function fetch(url, opt = {}) {
     return await retry(
         () => {
             onrequest(url, opt);
+            // @ts-ignore
             return nodefetch.default(url, opt);
         },
         {

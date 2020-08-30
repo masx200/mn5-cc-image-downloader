@@ -1,14 +1,14 @@
 {
-    "bin": "cli.js",
+    "bin": "src/cli.js",
     "type": "module",
     "name": "@masx200/mn5-cc-image-downloader",
     "version": "1.2.1",
-    "main": "index.js",
+    "main": "src/index.js",
     "license": "MIT",
     "scripts": {
         "test": "yarn start https://www.mn5.cc/YouMi/14745.html https://www.xiurenji.com/XiuRen/6197.html",
-        "start": "node cli.js",
-        "prettier": "prettier --write *.json *.md *.js"
+        "start": "node src/cli.js",
+        "prettier": "prettier --write *.json *.md **/*.js"
     },
     "keywords": [],
     "author": "masx200 <masx200@qq.com>",
