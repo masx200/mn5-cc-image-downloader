@@ -1,4 +1,7 @@
 {
+    "publishConfig": {
+        "registry": "https://registry.npmjs.com/"
+    },
     "bin": "src/cli.js",
     "type": "module",
     "name": "@masx200/mn5-cc-image-downloader",
