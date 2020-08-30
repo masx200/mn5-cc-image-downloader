@@ -1,5 +1,5 @@
 import { fetch } from "./fetch.js";
-import { rpcurl } from "./commonutils.js";
+import { rpcurl } from "./rpcurl.js";
 
 export async function requestjsonrpc(data) {
     const response = await fetch(rpcurl, {

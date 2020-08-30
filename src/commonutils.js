@@ -1,15 +1,10 @@
 import jsdom from "jsdom";
 import { checkurl } from "./checkurl.js";
 import { helptxt } from "./help.js";
-import { parseargs } from "./parseargs.js";
 import { resolvedocumentfromurl } from "./resolvedocumentfromurl.js";
 import { selectimagesfromdocument } from "./selectimagesfromdocument.js";
 import { downloadallpagesfromdocument } from "./start.js";
-import process from "process";
-const argobj = parseargs(process.argv.slice(2));
-export { argobj };
-console.log(argobj);
-export const rpcurl = argobj["rpcurl"] ?? "http://localhost:6800/jsonrpc";
+import { rpcurl } from "./rpcurl.js";
 try {
     checkurl(rpcurl);
 } catch (e) {
