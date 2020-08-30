@@ -14,10 +14,10 @@ try {
 import { urltodom } from "./index.js";
 import { fetch } from "./fetch.js";
 async function downloadallpagesfromdocument(document) {
-const allpageurls=selectpagehtmlurls(document)
+    const allpageurls = selectpagehtmlurls(document);
     await downloadonepageallimages(document);
     await Promise.all(
-       allpageurls .map(async (url) => {
+        allpageurls.map(async (url) => {
             const dom = await resolvedocumentfromurl(url);
             return await downloadonepageallimages(dom);
         })
@@ -26,9 +26,8 @@ const allpageurls=selectpagehtmlurls(document)
         "all album\xA0images\xA0download\xA0done " + document.documentURI
     );
 
-
-urltodom.delete(document.documentURI)
-allpageurls.forEach(url=>urltodom.delete(url))
+    urltodom.delete(document.documentURI);
+    allpageurls.forEach((url) => urltodom.delete(url));
 }
 async function callaria2cdown(fileurls, directoryname) {
     const data = fileurls.map((url) => {
@@ -83,7 +82,8 @@ function selectimagesfromdocument(document) {
                         .href;
                 })
                 .filter((a) => !!a)
-                .filter((a) => a.startsWith("http")).filter(a=>a.endsWith(".jpg"))
+                .filter((a) => a.startsWith("http"))
+                .filter((a) => a.endsWith(".jpg"))
         )
     );
     return fileurls;
