@@ -78,7 +78,7 @@ function selectimagesfromdocument(document) {
                         .href;
                 })
                 .filter((a) => !!a)
-                .filter((a) => a.startsWith("http"))
+                .filter((a) => a.startsWith("http")).filter(a=>a.endsWith(".jpg"))
         )
     );
     return fileurls;
