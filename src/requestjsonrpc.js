@@ -23,5 +23,5 @@ export async function requestjsonrpc(data) {
     if ("application/json-rpc" !== contenttype) {
         throw new Error("content-type:" + contenttype);
     }
-await response.json()
+    await response.json();
 }
