@@ -20,7 +20,7 @@
         "@masx200/async-task-current-limiter": "^1.0.9",
         "@shanyue/promise-utils": "^2.0.4",
         "jsdom": "^16.4.0",
-        "node-fetch": "^2.6.0"
+        "node-fetch": "^2.6.1"
     },
     "repository": {
         "type": "git",
