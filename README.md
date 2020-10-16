@@ -8,6 +8,8 @@ https://www.xiurenji.com/
 
 https://www.mn5.cc/
 
+https://www.mntp.vip/
+
 带有限流功能和网络重试功能
 
 # 配合 aria2 rpc
