@@ -2,13 +2,17 @@
 
 #### 介绍
 
-以下两个图片网站的相册图片下载器
+以下图片网站的相册图片下载器
+
+https://www.xiurenb.com/
 
 https://www.xiurenji.com/
 
 https://www.mn5.cc/
 
 https://www.mntp.vip/
+
+https://www.jpxgyw.vip/
 
 带有限流功能和网络重试功能
 
