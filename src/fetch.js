@@ -1,6 +1,6 @@
 import AsyncLimiterClass from "@masx200/async-task-current-limiter";
 import pupkg from "@shanyue/promise-utils";
-import nodefetch from "node-fetch";
+import nodefetch from "cross-fetch";
 
 const { retry, sleep } = pupkg;
 

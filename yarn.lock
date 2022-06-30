@@ -14,10 +14,20 @@
   resolved "https://registry.yarnpkg.com/@masx200/event-emitter-target/-/event-emitter-target-1.1.7.tgz#11757a805314886ecb54a5aa5fab6815b33b0913"
   integrity sha512-7MPOvpJxXOaX5QMRFn+oTrVg/vvff2fyOSAzGxHOf/sIZBnSLdaupJJPn2him/hkAzFmiCPK58uMP7f6iRLiIA==
 
+"@masx200/mini-cli-args-parser@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@masx200/mini-cli-args-parser/-/mini-cli-args-parser-1.0.5.tgz#a310153f81ff94485cd4e114df0dba76f8a0b2db"
+  integrity sha512-8sUYY+vRpRTCdr5dNKeQgHDcUSJZVi+uCralb+nnw4aZI0n35cJyI4nnhymztJuDrrO12PYIYYNL7O/hdILQfw==
+
 "@shanyue/promise-utils@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@shanyue/promise-utils/-/promise-utils-2.0.4.tgz#500a27fdcf2071300ac571cff1b397d934ffa45e"
   integrity sha512-dpGmggFZ80nZJJpQ957fxbavLXnkvrcL/miQXtIexlZZqWStGnNgKHQ4cdDUei+ktpKn24YbIXsiy957GtNs6g==
+
+"@types/node@^18.0.0":
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.0.tgz#67c7b724e1bcdd7a8821ce0d5ee184d3b4dd525a"
+  integrity sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==
 
 abab@^2.0.3:
   version "2.0.3"
@@ -117,6 +127,13 @@ core-util-is@1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+cross-fetch@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
+  integrity sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==
+  dependencies:
+    node-fetch "2.6.7"
 
 cssom@^0.4.4:
   version "0.4.4"
@@ -397,7 +414,7 @@ mime-types@^2.1.12, mime-types@~2.1.19:
   dependencies:
     mime-db "1.44.0"
 
-node-fetch@^2.6.1:
+node-fetch@2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
