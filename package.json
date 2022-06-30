@@ -17,7 +17,7 @@
     "author": "masx200 <masx200@qq.com>",
     "description": "以下两个网站的图片爬虫 www.mn5.cc 和 www.xiurenji.com",
     "dependencies": {
-        "@masx200/async-task-current-limiter": "^1.0.9",
+        "@masx200/async-task-current-limiter": "^2.0.1",
         "@masx200/mini-cli-args-parser": "^1.0.5",
         "@shanyue/promise-utils": "^2.0.4",
         "cross-fetch": "^3.1.5",
@@ -29,7 +29,6 @@
     },
     "devDependencies": {
         "@types/node": "^18.0.0",
-        "lodash": "4.17.21",
-        "prettier": "^2.3.0"
+        "prettier": "^2.7.1"
     }
 }
