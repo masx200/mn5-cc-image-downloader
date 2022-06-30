@@ -12,6 +12,6 @@ export async function gethtmltext(url) {
         throw new Error("content-type:" + contenttype);
     }
     const buffer = await response.arrayBuffer();
-    const text = new TextDecoder("gb2312").decode(buffer);
+    const text = new TextDecoder().decode(buffer);
     return text;
 }

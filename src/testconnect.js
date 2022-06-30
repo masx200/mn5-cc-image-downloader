@@ -5,7 +5,7 @@ import { rpcurl } from "./rpcurl.js";
 
 export async function testconnect() {
     const url = new URL(rpcurl);
-    console.log(url);
+    // console.log(url);
     await new Promise((resolve, reject) => {
         const socket = net.connect(url.port, url.hostname);
         socket.on("error", reject);
