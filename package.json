@@ -5,7 +5,7 @@
     "bin": "src/cli.js",
     "type": "module",
     "name": "@masx200/mn5-cc-image-downloader",
-    "verson": "1.2.5",
+    "version": "1.2.5",
     "main": "src/index.js",
     "license": "MIT",
     "scripts": {
