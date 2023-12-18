@@ -30,7 +30,7 @@
         "url": "https://github.com/masx200/mn5-cc-image-downloader"
     },
     "devDependencies": {
-        "@types/node": "^18.0.0",
+        "@types/node": "^20.10.5",
         "prettier": "^3.1.1"
     }
 }
