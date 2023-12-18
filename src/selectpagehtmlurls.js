@@ -7,7 +7,7 @@ export function selectpagehtmlurls(document) {
             ]).map((e) => {
                 return new URL(e.getAttribute("href"), document.documentURI)
                     .href;
-            })
-        )
+            }),
+        ),
     );
 }

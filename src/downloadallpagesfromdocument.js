@@ -10,10 +10,10 @@ export async function downloadallpagesfromdocument(document) {
         allpageurls.map(async (url) => {
             const dom = await resolvedocumentfromurl(url);
             return await downloadonepageallimages(dom);
-        })
+        }),
     );
     console.log(
-        "all album\xA0images\xA0download\xA0done " + document.documentURI
+        "all album\xA0images\xA0download\xA0done " + document.documentURI,
     );
 
     urltodom.delete(document.documentURI);

@@ -1,7 +1,8 @@
 import net from "net";
-// import { promisify } from "util";
 import { requestjsonrpc } from "./requestjsonrpc.js";
 import { rpcurl } from "./rpcurl.js";
+
+// import { promisify } from "util";
 
 export async function testconnect() {
     const url = new URL(rpcurl);
@@ -16,5 +17,5 @@ export async function testconnect() {
     // const s = await promisify(net.connect)(Number(url.port), url.hostname);
 
     // console.log(s);
-    await requestjsonrpc([]);
+    return await requestjsonrpc([]);
 }

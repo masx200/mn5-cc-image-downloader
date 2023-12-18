@@ -3,7 +3,7 @@ import process from "process";
 import { helptxt } from "./help.js";
 import { start } from "./index.js";
 const urls = Array.from(new Set(process.argv.slice(2))).filter((a) =>
-    a.startsWith("http")
+    a.startsWith("http"),
 );
 
 if (urls.length) {

@@ -9,6 +9,6 @@ export async function downloadonepageallimages(document) {
     console.log(url, directoryname, images);
     await callaria2cdown(images, directoryname);
     console.log(
-        "one page\xA0images\xA0download\xA0done " + document.documentURI
+        "one page\xA0images\xA0download\xA0done " + document.documentURI,
     );
 }

@@ -8,8 +8,8 @@ export function selectimagesfromdocument(document) {
                 })
                 .filter((a) => !!a)
                 .filter((a) => a.startsWith("http"))
-                .filter((a) => a.endsWith(".jpg"))
-        )
+                .filter((a) => a.endsWith(".jpg")),
+        ),
     );
     return fileurls;
 }

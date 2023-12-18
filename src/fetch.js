@@ -20,7 +20,7 @@ async function fetch(url, opt = {}) {
                 console.warn("网络错误，4秒后重试");
                 await sleep(4000);
             },
-        }
+        },
     );
 }
 
