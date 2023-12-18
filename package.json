@@ -21,7 +21,7 @@
         "@masx200/async-task-current-limiter": "^2.1.0",
         "@masx200/mini-cli-args-parser": "^1.0.5",
         "@shanyue/promise-utils": "^2.0.4",
-        "cross-fetch": "^3.1.5",
+        "cross-fetch": "^4.0.0",
         "jsdom": "^23.0.1",
         "json-schema": "^0.4.0"
     },
